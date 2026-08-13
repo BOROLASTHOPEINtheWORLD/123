@@ -4,7 +4,6 @@ if (!window._origSendMouse) {
     if (window.CORE?.net) {
         window.CORE.net.sendMouseMove = function(...args) {
             if (window.gamePaused) {
-                // Отправляем фальшивые координаты (центр экрана)
                 const fakePacket = new (window.At || class {
                     constructor() {
                         this._b = [];
